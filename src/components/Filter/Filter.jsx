@@ -1,11 +1,17 @@
 import css from './Filter.module.css'
 
-export const Filter = ({ filter, handleChangeFilter, contacts }) => {
+export const Filter = ({ filter, handleChangeFilter }) => {
     return (
         <div className={css.filterContainer}>
-        <h2 className={css.filterTitle}>Filter</h2>
-        <p className={css.filterText}>Find contacts by name</p>
-        <input className={css.filterInput} value={filter} onChange={handleChangeFilter} type="text" name="keyword"/>
-    </div>
-    )
+            <p className={css.filterTitle}>Find contacts by name</p>
+            <input
+                className={css.filterInput}
+                value={filter}
+                onChange={handleChangeFilter}
+                type="text"
+                name="filter"
+                placeholder="Kate..."
+            />
+        </div>
+    );
 }
